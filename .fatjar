@@ -1,5 +1,5 @@
 #Fat Jar Configuration File
-#Thu Jun 13 17:46:37 JST 2013
+#Thu Jun 13 19:40:45 JST 2013
 onejar.license.required=true
 manifest.classpath=
 manifest.removesigners=true
@@ -10,5 +10,5 @@ manifest.mainclass=
 manifest.file=<createnew>
 jarname.isextern=false
 onejar.expand=
-excludes=<jar|commons-logging-1.0.4.jar>;<jar|hadoop-core-0.20.2-cdh3u5.jar>;<jar|hive-exec-0.10.0.jar>;<jar|hive-jdbc-0.10.0.jar>;<jar|hive-metastore-0.10.0.jar>;<jar|hive-serde-0.10.0.jar>
+excludes=<jar|commons-logging-1.0.4.jar>;<jar|hive-exec-0.10.0.jar>;<jar|hive-jdbc-0.10.0.jar>;<jar|hive-metastore-0.10.0.jar>;<jar|hive-serde-0.10.0.jar>;<jar|hadoop-core-0.20.2-cdh3u6.jar>
 includes=

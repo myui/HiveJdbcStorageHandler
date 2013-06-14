@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src/java"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="src" path="src/test"/>
 	<classpathentry kind="lib" path="lib/commons-logging-1.0.4.jar"/>
-	<classpathentry kind="lib" path="lib/hadoop-core-0.20.2-cdh3u5.jar" sourcepath="/hadoop-1.0.4"/>
 	<classpathentry kind="lib" path="lib/hive-exec-0.10.0.jar" sourcepath="/hive-0.10.0/src"/>
 	<classpathentry kind="lib" path="lib/hive-jdbc-0.10.0.jar" sourcepath="/hive-0.10.0/src"/>
 	<classpathentry kind="lib" path="lib/hive-metastore-0.10.0.jar" sourcepath="/hive-0.10.0/src"/>
 	<classpathentry kind="lib" path="lib/hive-serde-0.10.0.jar" sourcepath="/hive-0.10.0/src"/>
 	<classpathentry kind="lib" path="lib/drivers/postgresql-9.2-1002.jdbc4.jar"/>
+	<classpathentry kind="lib" path="lib/hadoop-core-0.20.2-cdh3u6.jar" sourcepath="/hadoop-0.20.2-cdh3u6/src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="build"/>
 </classpath>

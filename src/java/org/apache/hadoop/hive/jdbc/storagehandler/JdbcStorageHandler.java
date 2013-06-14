@@ -7,6 +7,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hive.metastore.HiveMetaHook;
+import org.apache.hadoop.hive.metastore.MetaStoreUtils;
 import org.apache.hadoop.hive.metastore.api.MetaException;
 import org.apache.hadoop.hive.metastore.api.Table;
 import org.apache.hadoop.hive.ql.io.HiveOutputFormat;
@@ -140,6 +141,9 @@ public class JdbcStorageHandler implements HiveStorageHandler, HiveStoragePredic
 
         @Override
         public void preCreateTable(Table tbl) throws MetaException {
+            if(!MetaStoreUtils.isExternalTable(tbl)) {
+                throw new MetaException("Table must be external.");
+            }
             // TODO Auto-generated method stub
         }
 
