@@ -1,8 +1,7 @@
 HiveJdbcStorageHandler
 ======================
 
-This project is still work in progress.
-
+This project is still work in progress intending to submit a patch for [HIVE-1555](https://issues.apache.org/jira/browse/HIVE-1555).
 
 BASIC USAGE
 -----------
