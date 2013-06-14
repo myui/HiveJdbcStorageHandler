@@ -18,7 +18,6 @@ import org.apache.hadoop.hive.ql.plan.ExprNodeDesc;
 import org.apache.hadoop.hive.ql.plan.TableDesc;
 import org.apache.hadoop.hive.ql.security.authorization.DefaultHiveAuthorizationProvider;
 import org.apache.hadoop.hive.ql.security.authorization.HiveAuthorizationProvider;
-import org.apache.hadoop.hive.serde.serdeConstants;
 import org.apache.hadoop.hive.serde2.Deserializer;
 import org.apache.hadoop.hive.serde2.SerDe;
 import org.apache.hadoop.io.Writable;
@@ -26,8 +25,6 @@ import org.apache.hadoop.io.WritableComparable;
 import org.apache.hadoop.mapred.InputFormat;
 import org.apache.hadoop.mapred.JobConf;
 import org.apache.hadoop.mapred.lib.db.DBConfiguration;
-
-//import org.apache.hadoop.hive.serde.Constants; // for 0.9.0
 
 /**
  * -- required settings
@@ -87,7 +84,7 @@ public class JdbcStorageHandler implements HiveStorageHandler, HiveStoragePredic
 
         String tblName = tableDesc.getTableName();
         Properties tblProps = tableDesc.getProperties();
-        String columnNames = tblProps.getProperty(serdeConstants.LIST_COLUMNS);
+        String columnNames = tblProps.getProperty(Constants.LIST_COLUMNS);
         jobProperties.put(DBConfiguration.INPUT_CLASS_PROPERTY, DbRecordWritable.class.getName());
         jobProperties.put(DBConfiguration.INPUT_TABLE_NAME_PROPERTY, tblName);
         jobProperties.put(DBConfiguration.OUTPUT_TABLE_NAME_PROPERTY, tblName);

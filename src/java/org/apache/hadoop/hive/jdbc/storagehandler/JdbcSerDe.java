@@ -8,7 +8,6 @@ import java.util.Properties;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.hadoop.conf.Configuration;
-import org.apache.hadoop.hive.serde.serdeConstants;
 import org.apache.hadoop.hive.serde2.SerDe;
 import org.apache.hadoop.hive.serde2.SerDeException;
 import org.apache.hadoop.hive.serde2.SerDeStats;
@@ -17,8 +16,6 @@ import org.apache.hadoop.hive.serde2.objectinspector.ObjectInspectorFactory;
 import org.apache.hadoop.hive.serde2.objectinspector.StructField;
 import org.apache.hadoop.hive.serde2.objectinspector.StructObjectInspector;
 import org.apache.hadoop.io.Writable;
-
-//import org.apache.hadoop.hive.serde.Constants; // for 0.9.0
 
 /**
  * Serialize/Deserialize a tuple.
@@ -41,8 +38,8 @@ public class JdbcSerDe implements SerDe {
             LOG.debug("tblProps: " + tblProps);
         }
 
-        String columnNameProperty = tblProps.getProperty(serdeConstants.LIST_COLUMNS);
-        String columnTypeProperty = tblProps.getProperty(serdeConstants.LIST_COLUMN_TYPES);
+        String columnNameProperty = tblProps.getProperty(Constants.LIST_COLUMNS);
+        String columnTypeProperty = tblProps.getProperty(Constants.LIST_COLUMN_TYPES);
 
         List<String> columnNames = Arrays.asList(columnNameProperty.split(","));
         String[] columnTypes = columnTypeProperty.split(":");
